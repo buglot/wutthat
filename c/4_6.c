@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int main(){
-    int numberInput,countEven=0,sumODD=0,ProductEven=1;
+    int numberInput[10],countEven=0,sumODD=0,ProductEven=1;
     int i;
     for(i=0;i<10;i++){
         printf("Enter number #%d: ",i+1);
-        scanf("%d",&numberInput);
-        if(numberInput%2==0){
+        scanf("%d",&numberInput[i]);
+        if(numberInput[i]%2==0){
             countEven++;
             ProductEven*=numberInput;
         }else{
-            sumODD+=numberInput;
+            sumODD+=numberInput[i];
         }
     }
     printf("The number of ODD numbers = %d",10-countEven);
